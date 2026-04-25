@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Madhuke Jayalath — Elite Audit, Finance & Advisory Professional. Delivering precision-driven financial intelligence and audit excellence." />
+  <meta name="keywords" content="Madhuke Jayalath, Audit, Finance, Advisory, Financial Reporting, Internal Controls, Excel Automation" />
+  <meta name="author" content="Madhuke Jayalath" />
+  <meta property="og:title" content="Madhuke Jayalath | Audit · Finance · Advisory" />
+  <meta property="og:description" content="Elite finance and audit professional delivering precision-driven financial intelligence." />
+  <meta property="og:type" content="website" />
+  <title>Madhuke Jayalath | Audit · Finance · Advisory</title>
+
+  <!-- Google Fonts: Premium pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Manrope:wght@300;400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ LOADING SCREEN ═══ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">MJ</div>
+      <div class="loader__bar"><span></span></div>
+      <p class="loader__text">Initialising…</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ CURSOR ═══════════ -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════ NAVBAR ═════════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="navbar__inner container" aria-label="Primary navigation">
+      <!-- Logo -->
+      <a href="#home" class="navbar__logo" aria-label="Madhuke Jayalath Home">
+        <span class="logo-mark">MJ</span>
+        <span class="logo-name">Madhuke<em>Jayalath</em></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="navbar__links" role="list">
+        <li><a href="#home" class="nav-link active" data-nav="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+        <li><a href="#services" class="nav-link" data-nav="services">Services</a></li>
+        <li><a href="#expertise" class="nav-link" data-nav="expertise">Expertise</a></li>
+        <li><a href="#insights" class="nav-link" data-nav="insights">Insights</a></li>
+        <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+      </ul>
+
+      <!-- Controls -->
+      <div class="navbar__controls">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle Theme">
+          <span class="toggle-track">
+            <span class="toggle-thumb">
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+          </span>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#home" class="mob-link">Home</a></li>
+        <li><a href="#about" class="mob-link">About</a></li>
+        <li><a href="#services" class="mob-link">Services</a></li>
+        <li><a href="#expertise" class="mob-link">Expertise</a></li>
+        <li><a href="#insights" class="mob-link">Insights</a></li>
+        <li><a href="#contact" class="mob-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════ HERO ══════════════ -->
+    <section id="home" class="hero" aria-label="Hero">
+      <!-- Animated background canvas -->
+      <canvas id="heroCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+
+      <!-- Floating geometric shapes -->
+      <div class="hero__shapes" aria-hidden="true">
+        <div class="shape shape--1"></div>
+        <div class="shape shape--2"></div>
+        <div class="shape shape--3"></div>
+        <div class="shape shape--4"></div>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__badge reveal-up">
+          <span class="badge-dot"></span>
+          <span>Available for Engagements</span>
+        </div>
+
+        <h1 class="hero__name reveal-up" style="--delay: 0.1s">
+          <span class="name-line">Madhuke</span>
+          <span class="name-line name-line--accent">Jayalath</span>
+        </h1>
+
+        <div class="hero__roles reveal-up" style="--delay: 0.2s">
+          <span class="role-static">Audit</span>
+          <span class="role-divider">·</span>
+          <span class="role-static">Finance</span>
+          <span class="role-divider">·</span>
+          <span class="role-typed" id="typedText" aria-live="polite"></span>
+          <span class="role-cursor" aria-hidden="true">|</span>
+        </div>
+
+        <p class="hero__tagline reveal-up" style="--delay: 0.3s">
+          Precision-driven financial intelligence.<br />
+          Delivering clarity where complexity reigns.
+        </p>
+
+        <div class="hero__cta reveal-up" style="--delay: 0.4s">
+          <a href="#contact" class="btn btn--primary magnetic">
+            <span>Let's Connect</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#services" class="btn btn--ghost magnetic">
+            <span>View Services</span>
+          </a>
+        </div>
+
+        <!-- Metric counters -->
+        <div class="hero__metrics reveal-up" style="--delay: 0.5s">
+          <div class="metric">
+            <span class="metric__num" data-target="5">0</span><span class="metric__suffix">+</span>
+            <span class="metric__label">Years Experience</span>
+          </div>
+          <div class="metric-sep" aria-hidden="true"></div>
+          <div class="metric">
+            <span class="metric__num" data-target="120">0</span><span class="metric__suffix">+</span>
+            <span class="metric__label">Engagements</span>
+          </div>
+          <div class="metric-sep" aria-hidden="true"></div>
+          <div class="metric">
+            <span class="metric__num" data-target="30">0</span><span class="metric__suffix">+</span>
+            <span class="metric__label">Clients Served</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+        <span class="scroll-text">Scroll</span>
+        <span class="scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════ ABOUT ═════════════ -->
+    <section id="about" class="section about" aria-label="About Madhuke Jayalath">
+      <div class="container">
+        <div class="section-label reveal-up">
+          <span class="label-line"></span>
+          <span>01 / About</span>
+        </div>
+
+        <div class="about__grid">
+          <!-- Left: Image + card -->
+          <div class="about__visual reveal-left">
+            <div class="about__img-wrap">
+              <!-- Replace with actual photo: <img src="assets/madhuke.jpg" alt="Madhuke Jayalath" /> -->
+              <div class="about__img-placeholder" aria-label="Portrait of Madhuke Jayalath">
+                <span class="placeholder-monogram">MJ</span>
+                <p class="placeholder-note">Place photo here:<br><code>assets/madhuke.jpg</code></p>
+              </div>
+              <div class="about__img-glow" aria-hidden="true"></div>
+            </div>
+
+            <!-- Floating stat card -->
+            <div class="about__stat-card glass-card">
+              <div class="stat-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <strong>Precision Analytics</strong>
+                <span>Data-led decision making</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Content -->
+          <div class="about__content reveal-right">
+            <h2 class="section-title">Turning Numbers<br /><em>Into Strategy</em></h2>
+
+            <p class="about__intro">
+              I am a finance and audit professional with a commitment to excellence, analytical rigour, and an unwavering attention to detail. My practice bridges the gap between raw financial data and the strategic insight executives need to make confident decisions.
+            </p>
+
+            <div class="about__highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                </div>
+                <div>
+                  <strong>Audit Excellence</strong>
+                  <p>End-to-end audit support aligned with international standards, ensuring accuracy and compliance.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <div>
+                  <strong>Financial Reporting</strong>
+                  <p>Clear, compliant, and compelling financial statements that build stakeholder confidence.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div>
+                  <strong>Advisory Intelligence</strong>
+                  <p>Strategic insights delivered with the precision of a CFO and the perspective of a trusted advisor.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__cta">
+              <a href="#services" class="btn btn--primary magnetic"><span>Explore Services</span></a>
+              <a href="#contact" class="btn btn--outline magnetic"><span>Work With Me</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SERVICES ══════════ -->
+    <section id="services" class="section services" aria-label="Services">
+      <div class="container">
+        <div class="section-label reveal-up">
+          <span class="label-line"></span>
+          <span>02 / Services</span>
+        </div>
+        <div class="section-header reveal-up">
+          <h2 class="section-title">What I Deliver</h2>
+          <p class="section-sub">Comprehensive finance and audit solutions engineered for precision and impact.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <article class="service-card tilt-card reveal-up" style="--delay: 0s" tabindex="0">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3>Audit Support</h3>
+            <p>End-to-end audit assistance — from planning and fieldwork to documentation and closure — aligned with IAASB and local standards.</p>
+            <span class="service-card__tag">Assurance</span>
+          </article>
+
+          <article class="service-card tilt-card reveal-up" style="--delay: 0.08s" tabindex="0">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3>Financial Reporting</h3>
+            <p>Preparation and review of statutory financial statements, IFRS-compliant reports, and management accounts of impeccable quality.</p>
+            <span class="service-card__tag">Reporting</span>
+          </article>
+
+          <article class="service-card tilt-card reveal-up" style="--delay: 0.16s" tabindex="0">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>Internal Controls</h3>
+            <p>Design, assessment, and strengthening of internal control frameworks to safeguard assets and ensure operational integrity.</p>
+            <span class="service-card__tag">Governance</span>
+          </article>
+
+          <article class="service-card tilt-card reveal-up" style="--delay: 0.24s" tabindex="0">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Excel Automation</h3>
+            <p>Advanced Excel models, dynamic dashboards, and VBA automation that eliminate manual effort and unlock real-time insight.</p>
+            <span class="service-card__tag">Technology</span>
+          </article>
+
+          <article class="service-card tilt-card reveal-up" style="--delay: 0.32s" tabindex="0">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Business Advisory</h3>
+            <p>Strategic financial counsel for business leaders navigating growth, restructuring, or investor-facing decisions.</p>
+            <span class="service-card__tag">Strategy</span>
+          </article>
+
+          <article class="service-card tilt-card reveal-up" style="--delay: 0.40s" tabindex="0">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Financial Analysis</h3>
+            <p>Deep-dive ratio analysis, variance commentary, forecasting, and KPI frameworks tailored to industry and stakeholder needs.</p>
+            <span class="service-card__tag">Analytics</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ EXPERTISE ═════════ -->
+    <section id="expertise" class="section expertise" aria-label="Skills and Expertise">
+      <div class="container">
+        <div class="section-label reveal-up">
+          <span class="label-line"></span>
+          <span>03 / Expertise</span>
+        </div>
+        <div class="section-header reveal-up">
+          <h2 class="section-title">Core Competencies</h2>
+          <p class="section-sub">A finely honed skill set built through years of professional practice and continuous advancement.</p>
+        </div>
+
+        <div class="expertise__grid">
+          <!-- Skill Bars -->
+          <div class="skill-bars reveal-left">
+            <div class="skill-bar" data-skill="Audit & Assurance" data-level="92">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Audit &amp; Assurance</span>
+                <span class="skill-bar__pct">92%</span>
+              </div>
+              <div class="skill-bar__track" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                <div class="skill-bar__fill" style="--target: 92%"></div>
+              </div>
+            </div>
+            <div class="skill-bar" data-skill="Excel & Automation" data-level="95">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Excel &amp; Automation</span>
+                <span class="skill-bar__pct">95%</span>
+              </div>
+              <div class="skill-bar__track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                <div class="skill-bar__fill" style="--target: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-bar" data-skill="Financial Reporting" data-level="90">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Financial Reporting</span>
+                <span class="skill-bar__pct">90%</span>
+              </div>
+              <div class="skill-bar__track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="skill-bar__fill" style="--target: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-bar" data-skill="Data Analytics" data-level="85">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Data Analytics</span>
+                <span class="skill-bar__pct">85%</span>
+              </div>
+              <div class="skill-bar__track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                <div class="skill-bar__fill" style="--target: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-bar" data-skill="Internal Controls" data-level="88">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Internal Controls</span>
+                <span class="skill-bar__pct">88%</span>
+              </div>
+              <div class="skill-bar__track" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                <div class="skill-bar__fill" style="--target: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-bar" data-skill="Communication" data-level="93">
+              <div class="skill-bar__header">
+                <span class="skill-bar__name">Executive Communication</span>
+                <span class="skill-bar__pct">93%</span>
+              </div>
+              <div class="skill-bar__track" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">
+                <div class="skill-bar__fill" style="--target: 93%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Competency tiles -->
+          <div class="competency-tiles reveal-right">
+            <div class="comp-tile glass-card">
+              <span class="comp-tile__icon" aria-hidden="true">📊</span>
+              <strong>IFRS / LKAS</strong>
+              <p>Standards-based financial reporting and disclosure frameworks</p>
+            </div>
+            <div class="comp-tile glass-card">
+              <span class="comp-tile__icon" aria-hidden="true">🔍</span>
+              <strong>Risk Assessment</strong>
+              <p>Identifying, measuring, and mitigating enterprise financial risk</p>
+            </div>
+            <div class="comp-tile glass-card">
+              <span class="comp-tile__icon" aria-hidden="true">📁</span>
+              <strong>Audit Documentation</strong>
+              <p>Working papers, evidence files, and conclusion narratives</p>
+            </div>
+            <div class="comp-tile glass-card">
+              <span class="comp-tile__icon" aria-hidden="true">💡</span>
+              <strong>Process Improvement</strong>
+              <p>Streamlining financial workflows for speed and accuracy</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certs reveal-up">
+          <p class="certs__label">Professional Standing</p>
+          <div class="certs__list">
+            <div class="cert-badge">CA Candidate</div>
+            <div class="cert-badge">ICASL Member</div>
+            <div class="cert-badge">IFRS Trained</div>
+            <div class="cert-badge">Excel Advanced</div>
+            <div class="cert-badge">Power BI</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ INSIGHTS ══════════ -->
+    <section id="insights" class="section insights" aria-label="Insights and Articles">
+      <div class="container">
+        <div class="section-label reveal-up">
+          <span class="label-line"></span>
+          <span>04 / Insights</span>
+        </div>
+        <div class="section-header reveal-up">
+          <h2 class="section-title">Financial Intelligence</h2>
+          <p class="section-sub">Practical perspectives from the intersection of audit, finance, and strategy.</p>
+        </div>
+
+        <div class="insights__grid">
+
+          <article class="insight-card reveal-up" style="--delay: 0s" tabindex="0">
+            <div class="insight-card__label">Audit</div>
+            <div class="insight-card__num" aria-hidden="true">01</div>
+            <h3>How to Prepare for an Audit</h3>
+            <p>A comprehensive guide to audit readiness — from organising documentation to preparing your finance team for fieldwork.</p>
+            <a href="#" class="insight-card__link" aria-label="Read: How to Prepare for an Audit">
+              Read Article
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <article class="insight-card reveal-up" style="--delay: 0.1s" tabindex="0">
+            <div class="insight-card__label">Excel</div>
+            <div class="insight-card__num" aria-hidden="true">02</div>
+            <h3>Excel Tips for Finance Teams</h3>
+            <p>Ten power-user techniques that dramatically accelerate financial modelling, reporting, and month-end close workflows.</p>
+            <a href="#" class="insight-card__link" aria-label="Read: Excel Tips for Finance Teams">
+              Read Article
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <article class="insight-card reveal-up" style="--delay: 0.2s" tabindex="0">
+            <div class="insight-card__label">Accounting</div>
+            <div class="insight-card__num" aria-hidden="true">03</div>
+            <h3>Common Business Accounting Errors</h3>
+            <p>The most frequent accounting mistakes SMEs and large entities make — and how to prevent them before they become material issues.</p>
+            <a href="#" class="insight-card__link" aria-label="Read: Common Business Accounting Errors">
+              Read Article
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ CONTACT ═══════════ -->
+    <section id="contact" class="section contact" aria-label="Contact Madhuke Jayalath">
+      <div class="container">
+        <div class="section-label reveal-up">
+          <span class="label-line"></span>
+          <span>05 / Contact</span>
+        </div>
+        <div class="section-header reveal-up">
+          <h2 class="section-title">Begin a Conversation</h2>
+          <p class="section-sub">Ready to elevate your financial operations? I'm one message away.</p>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Contact info -->
+          <div class="contact__info reveal-left">
+            <div class="contact-detail">
+              <div class="contact-detail__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:madhuke@example.com">madhuke@example.com</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span>Location</span>
+                <a href="#">Colombo, Sri Lanka</a>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              <a href="#" class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="https://wa.me/94700000000" class="social-btn social-btn--whatsapp" aria-label="WhatsApp" title="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M5.077 19.938A11.952 11.952 0 0 1 .5 12C.5 5.648 5.648.5 12 .5c6.352 0 11.5 5.148 11.5 11.5 0 6.352-5.148 11.5-11.5 11.5a11.954 11.954 0 0 1-5.682-1.438L1 23l1.938-5.062z" fill-rule="evenodd"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact__form glass-card reveal-right" id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Full Name</label>
+                <input type="text" id="fname" name="name" placeholder="Your full name" required autocomplete="name" />
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="femail">Email Address</label>
+                <input type="email" id="femail" name="email" placeholder="your@email.com" required autocomplete="email" />
+                <span class="form-error" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" name="subject" placeholder="How can I help?" required />
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" name="message" placeholder="Tell me about your engagement…" rows="5" required></textarea>
+              <span class="form-error" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full magnetic" id="formSubmit">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Message sent! I'll be in touch shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════ FOOTER ════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#home" class="footer__logo" aria-label="Madhuke Jayalath — back to top">
+            <span class="logo-mark">MJ</span>
+          </a>
+          <p>Madhuke Jayalath<br /><em>Audit · Finance · Advisory</em></p>
+          <p class="footer__tagline">Precision. Integrity. Excellence.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Navigate</h4>
+          <ul role="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__services">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="#services">Audit Support</a></li>
+            <li><a href="#services">Financial Reporting</a></li>
+            <li><a href="#services">Internal Controls</a></li>
+            <li><a href="#services">Excel Automation</a></li>
+            <li><a href="#services">Business Advisory</a></li>
+          </ul>
+        </div>
+        <div class="footer__social">
+          <h4>Connect</h4>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://wa.me/94700000000" class="footer-social-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M5.077 19.938A11.952 11.952 0 0 1 .5 12C.5 5.648 5.648.5 12 .5c6.352 0 11.5 5.148 11.5 11.5 0 6.352-5.148 11.5-11.5 11.5a11.954 11.954 0 0 1-5.682-1.438L1 23l1.938-5.062z" fill-rule="evenodd"/></svg>
+            </a>
+            <a href="mailto:madhuke@example.com" class="footer-social-btn" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Madhuke Jayalath. All rights reserved.</p>
+        <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
